@@ -1,0 +1,294 @@
+{
+  "basics": {
+    "name": "Dheeraj Kumar P",
+    "label": "Lead Software Engineer | Ruby on Rails Expert",
+    "image": null,
+    "bg_image": null,
+    "email": "dk1563@gmail.com",
+    "phone": "+919746971108",
+    "url": null,
+    "location": {
+      "address": null,
+      "postal_code": null,
+      "city": "Kozhikode",
+      "country_code": "IN",
+      "region": null
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Dheeraj Kumar P",
+        "url": "https://www.linkedin.com/in/dheeraj-kumar-p-46783a100/",
+        "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+      }
+    ],
+    "actions": []
+  },
+  "about": {
+    "summary": "Highly experienced Lead Software Engineer with 9 years of expertise in the information technology and services industry, specialising in Ruby on Rails development. Proven ability to lead development, optimise system performance, and mentor engineering teams to deliver scalable and reliable software solutions. Adept at translating complex client requirements into technical specifications and driving successful project deployments from concept to production."
+  },
+  "media": [],
+  "work": [
+    {
+      "name": "QBurst",
+      "position": "Lead Software Engineer",
+      "type": null,
+      "url": "https://",
+      "start_date": "2022-07-01",
+      "end_date": null,
+      "summary": "Led software development initiatives, focusing on performance optimization, code quality, and team mentorship to enhance user experience and project delivery.",
+      "highlights": [
+        "Managed and resolved critical optimization tickets, significantly improving user experience and application performance.",
+        "Conducted comprehensive code reviews for team members, ensuring adherence to best practices, scalability, and maintainable code quality.",
+        "Provided direct technical guidance and mentorship to junior developers, fostering skill development and contributing to overall team proficiency."
+      ],
+      "city": "Kozhikode",
+      "state": null,
+      "country": "India"
+    },
+    {
+      "name": "QBurst",
+      "position": "Senior Software Engineer",
+      "type": null,
+      "url": "https://",
+      "start_date": "2019-07-01",
+      "end_date": "2022-07-01",
+      "summary": "Played a pivotal role in full-stack development, client requirement analysis, and environment management for diverse projects.",
+      "highlights": [
+        "Facilitated in-depth discussions with clients to accurately gather and translate complex business requirements into actionable technical specifications.",
+        "Provided essential technical support and strategic guidance to project teams, ensuring successful feature implementation and problem resolution.",
+        "Managed end-to-end server configurations and deployments for production and QA environments, ensuring seamless application availability and performance.",
+        "Engineered and deployed a dedicated QA environment utilizing AWS EC2, RDS, and S3, significantly streamlining the testing and validation processes for a key project.",
+        "Contributed across the full stack, developing both robust frontend and backend solutions for critical project functionalities."
+      ],
+      "city": "Kozhikode",
+      "state": null,
+      "country": "India"
+    },
+    {
+      "name": "QBurst",
+      "position": "Software Engineer",
+      "type": null,
+      "url": "https://",
+      "start_date": "2016-06-01",
+      "end_date": "2019-07-01",
+      "summary": "Developed and maintained software solutions, focusing on code quality, issue resolution, and automated deployment processes.",
+      "highlights": [
+        "Developed readable, scalable, and reliable code, contributing to the successful completion of various project stories and features.",
+        "Resolved diverse technical issues and critical bug fixes, enhancing system stability and user satisfaction.",
+        "Implemented and configured automated project deployment pipelines using Jenkins and Capistrano, significantly reducing manual effort and accelerating release cycles.",
+        "Managed Supervisor configurations to automate the execution of critical interfaces, improving operational efficiency and system reliability."
+      ],
+      "city": "Kozhikode",
+      "state": null,
+      "country": "India"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Kannur University",
+      "url": "https://",
+      "area": "Electrical and Electronics Engineering",
+      "study_type": "Bachelor's degree",
+      "start_date": "2012-08-01",
+      "end_date": "2016-04-01",
+      "score": "",
+      "courses": [],
+      "city": "Kannur",
+      "state": null,
+      "country": "India"
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "languages": [],
+  "certificates": [
+    {
+      "name": "Generative AI for Software Development",
+      "date": "2025-08-01",
+      "issuer": "DeepLearning.AI",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/6N2HFIJE6OPD"
+    },
+    {
+      "name": "Google Prompting Essentials",
+      "date": "2025-04-19",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/verify/57G56ODC0RF5"
+    },
+    {
+      "name": "AI For Developers With GitHub Copilot, Cursor AI & ChatGPT",
+      "date": "2025-03-16",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-9f04bb3e-4410-4685-889a-22390f36f962/"
+    },
+    {
+      "name": "Software Architecture & System Design Practical Case Studies",
+      "date": "2024-10-24",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-3a39df1f-5527-4e86-bfa0-fe6085978cf1"
+    },
+    {
+      "name": "ChatGPT Masterclass: The Guide to AI & Prompt Engineering",
+      "date": "2024-10-06",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-5fe6ae21-9b44-4a4b-8897-b6dbebfdbc62/"
+    },
+    {
+      "name": "Python for Computer Vision with OpenCV and Deep Learning",
+      "date": "2024-03-29",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-ed6390e9-8335-4a59-ae41-09ca408010fc/"
+    },
+    {
+      "name": "The Complete Cloud Computing Software Architecture Patterns",
+      "date": "2023-10-23",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-fab41701-d284-4df2-b195-dbdbc854311b/"
+    },
+    {
+      "name": "Software Architecture & Design of Modern Large Scale Systems",
+      "date": "2023-05-18",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-29568d08-55e2-4da3-923d-693dc028425b"
+    },
+    {
+      "name": "The Complete JavaScript Course 2023: From Zero to Expert!",
+      "date": "2023-03-21",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-808cf14c-4a1e-4318-b74d-0d2a48dc9787/"
+    },
+    {
+      "name": "Machine Learning",
+      "date": "2022-06-21",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/verify/KZA9SQWTG5ZB"
+    },
+    {
+      "name": "Architecting with Google Cloud Platform Specialization",
+      "date": "2019-01-01",
+      "issuer": "Coursera",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/DSYMCW3GFPGC"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages & Frameworks",
+      "keywords": [
+        "Ruby on Rails",
+        "Ruby",
+        "Python",
+        "Angular",
+        "jQuery",
+        "Haml"
+      ]
+    },
+    {
+      "name": "Databases & Caching",
+      "keywords": [
+        "MySQL",
+        "PostgreSQL",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Cloud Platforms & Services",
+      "keywords": [
+        "Amazon EC2",
+        "Amazon S3",
+        "Amazon RDS",
+        "Google Cloud Platform",
+        "Google Analytics API",
+        "Amazon CloudFront"
+      ]
+    },
+    {
+      "name": "DevOps & Tools",
+      "keywords": [
+        "GIT",
+        "Jenkins",
+        "Capistrano",
+        "Docker",
+        "Supervisord",
+        "Selenium",
+        "RabbitMQ",
+        "Nginx",
+        "Apache"
+      ]
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Property Management System",
+      "type": null,
+      "description": "Developed a comprehensive web application for managing hotel properties, encompassing reservation, check-in/check-out, key integration, and financial management.",
+      "highlights": [
+        "Designed and implemented core functionalities for reservation creation, check-in/check-out, and guest card management.",
+        "Integrated key management systems and handled detailed stay information, billing, and payment processing.",
+        "Utilized AngularJS and React for the frontend, and Ruby on Rails for the backend, ensuring a robust and scalable architecture."
+      ],
+      "start_date": null,
+      "end_date": null,
+      "url": "https://",
+      "preview_image": null
+    },
+    {
+      "name": "CMS for Theme Park",
+      "type": null,
+      "description": "Created a customizable Content Management System (CMS) for various theme park franchises, allowing admin control over public-facing content and page layouts.",
+      "highlights": [
+        "Developed a flexible CMS admin interface enabling customization of application content and page structures for different franchises.",
+        "Empowered administrators to create custom pages and manage links, providing dynamic content presentation for public users.",
+        "Implemented a fixed layout for the main page with rearrangeable item order, enhancing content versatility and user experience."
+      ],
+      "start_date": null,
+      "end_date": null,
+      "url": "https://",
+      "preview_image": null
+    },
+    {
+      "name": "Ticket Online App",
+      "type": null,
+      "description": "Engineered a web application for online ticket booking and payment for parks, featuring email confirmations and sales reports.",
+      "highlights": [
+        "Developed a secure online platform for customers to book and pay for various ticket types, streamlining the purchase process.",
+        "Integrated automated email confirmation for successful bookings and generated comprehensive sales reports for administrative insights.",
+        "Ensured the application was fully customizable through the CMS, providing flexibility for content and feature management."
+      ],
+      "start_date": null,
+      "end_date": null,
+      "url": "https://",
+      "preview_image": null
+    },
+    {
+      "name": "Incident Management System (Redmine Plugin)",
+      "type": null,
+      "description": "Developed a plugin for Redmine to view, record, track, and assign incidents, facilitating efficient issue resolution.",
+      "highlights": [
+        "Created a Redmine plugin for comprehensive incident management, allowing users to view, record, and track issues.",
+        "Implemented functionality to assign incidents to specific users and monitor the steps taken for resolution, improving accountability and workflow."
+      ],
+      "start_date": null,
+      "end_date": null,
+      "url": "https://",
+      "preview_image": null
+    },
+    {
+      "name": "Application for Data Handling",
+      "type": null,
+      "description": "Built an application to process and route CDR (Call Detail Record) and PMS (Property Management System) data for a device based on program settings.",
+      "highlights": [
+        "Developed a robust application capable of handling and processing diverse CDR and PMS data streams from a device.",
+        "Configured automated data routing mechanisms to send processed information to designated destinations based on predefined program settings, ensuring data integrity and timely delivery."
+      ],
+      "start_date": null,
+      "end_date": null,
+      "url": "https://",
+      "preview_image": null
+    }
+  ],
+  "links": [],
+  "locations": []
+}

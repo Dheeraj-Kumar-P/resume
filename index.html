@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dheeraj Kumar P — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent: #6C5CE7;
+      --accent-hover: #5844d8;
+      --muted:#6b7280;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#111}
+    body{background:linear-gradient(180deg,var(--bg),#ffffff);padding:32px}
+    .container{max-width:980px;margin:0 auto;display:grid;grid-template-columns:320px 1fr;gap:24px}
+
+    /* Left column */
+    .sidebar{background:var(--card);border-radius:16px;padding:22px;box-shadow:0 6px 30px rgba(20,20,50,0.06)}
+    .avatar{height:88px;width:88px;border-radius:16px;background:linear-gradient(135deg,var(--accent),#00b894);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:26px}
+    .name{font-size:20px;font-weight:700;margin-top:12px}
+    .label{color:var(--muted);font-size:13px;margin-top:6px}
+    .contact{margin-top:18px;font-size:14px}
+    .contact a{color:var(--accent);text-decoration:none}
+    .section{margin-top:20px}
+    .section h4{font-size:12px;letter-spacing:0.8px;color:var(--muted);text-transform:uppercase;margin:0 0 10px}
+    .skill-pill{display:inline-block;background:#f1f2ff;padding:8px 10px;border-radius:999px;margin:6px 6px 0 0;font-size:13px}
+
+    /* Right column */
+    .main{background:transparent;padding:0}
+    .card{background:var(--card);border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 6px 30px rgba(20,20,50,0.04)}
+    .summary{line-height:1.55;color:#222}
+    .job{display:flex;justify-content:space-between;align-items:flex-start}
+    .job .meta{color:var(--muted);font-size:13px}
+    .job h3{margin:4px 0;font-size:16px}
+    .highlights{margin-top:8px}
+    .highlights li{margin-bottom:6px}
+
+    .project{margin-bottom:12px}
+    .project h5{margin:0}
+    .muted{color:var(--muted)}
+
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr;padding:0}
+      .sidebar{order:1}
+      .main{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="avatar" id="avatar">DK</div>
+        <div>
+          <div class="name" id="name">Name</div>
+          <div class="label" id="label">Title</div>
+        </div>
+      </div>
+
+      <div class="contact section" id="contact">
+        <div class="muted">Contact</div>
+        <div style="margin-top:8px">
+          <div id="email"></div>
+          <div id="phone"></div>
+          <div id="location"></div>
+        </div>
+      </div>
+
+      <div class="section" id="profiles">
+        <h4>Profiles</h4>
+        <div id="profilesList"></div>
+      </div>
+
+      <div class="section" id="skills">
+        <h4>Skills</h4>
+        <div id="skillList"></div>
+      </div>
+
+      <div class="section" id="certs">
+        <h4>Certificates</h4>
+        <div id="certList"></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="card" id="summaryCard">
+        <h3>Professional Summary</h3>
+        <div class="summary" id="summary">Summary will go here.</div>
+      </div>
+
+      <div class="card" id="workExpCard">
+        <h3>Work Experience</h3>
+        <div id="workList"></div>
+      </div>
+
+      <div class="card" id="projectsCard">
+        <h3>Projects & Contributions</h3>
+        <div id="projectsList"></div>
+      </div>
+
+      <div class="card" id="educationCard">
+        <h3>Education</h3>
+        <div id="educationList"></div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function formatDate(d){
+      if(!d) return 'Present';
+      const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      try{
+        const dt = new Date(d);
+        if(isNaN(dt)) return d;
+        return months[dt.getMonth()]+' '+dt.getFullYear();
+      }catch(e){return d}
+    }
+
+    function renderBasics(basics){
+      document.getElementById('name').textContent = basics.name || '';
+      document.getElementById('label').textContent = basics.label || '';
+      const initials = basics.name ? basics.name.split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase() : 'PI';
+      document.getElementById('avatar').textContent = initials;
+
+      document.getElementById('email').innerHTML = basics.email
+        ? `<a href="mailto:${basics.email}" style="color: var(--accent); text-decoration: none; font-weight: 500;">
+            Email: ${basics.email}
+          </a>`
+        : '';
+
+      document.getElementById('phone').innerHTML = basics.phone
+        ? `<a href="tel:${basics.phone}" style="color: var(--accent); text-decoration: none; font-weight: 500;">
+            Phone: ${basics.phone}
+          </a>`
+        : '';
+
+      const loc = basics.location ? [basics.location.city, basics.location.country_code].filter(Boolean).join(', ') : '';
+      document.getElementById('location').textContent = loc;
+
+      const profilesList = document.getElementById('profilesList'); profilesList.innerHTML='';
+      if(basics.profiles && basics.profiles.length){
+        basics.profiles.forEach(p=>{
+          const el = document.createElement('div');
+          el.innerHTML = `<a href="${p.url||'#'}" target="_blank" 
+            style="color: var(--accent); text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 6px; margin-top: 6px;">
+            ${p.icon ? `<img src="${p.icon}" width="16" height="16" alt="${p.network}" />` : `<span>${p.network}</span>`}
+            <span>${p.username?' '+p.username:''}</span>
+          </a>`;
+          profilesList.appendChild(el);
+        })
+      }
+    }
+
+    function renderSummary(about){
+      document.getElementById('summary').textContent = about.summary || '';
+    }
+
+    function renderSkills(skills){
+      const el = document.getElementById('skillList'); el.innerHTML='';
+      skills.forEach(group=>{
+        const header = document.createElement('div'); header.style.marginTop='8px'; header.innerHTML = `<strong style="font-size:13px">${group.name}</strong>`;
+        el.appendChild(header);
+        const wrap = document.createElement('div');
+        (group.keywords||[]).forEach(k=>{
+          const pill = document.createElement('span'); pill.className='skill-pill'; pill.textContent = k; wrap.appendChild(pill);
+        });
+        el.appendChild(wrap);
+      })
+    }
+
+    function renderCertificates(certs) {
+      const el = document.getElementById('certList');
+      el.innerHTML = '';
+      (certs || []).forEach(c => {
+        const row = document.createElement('div');
+        row.style.marginBottom = '10px';
+        const link = c.url
+          ? `<a href="${c.url}" target="_blank" style="
+              color: var(--accent);
+              text-decoration: none;
+              font-weight: 600;
+            " 
+            onmouseover="this.style.color='var(--accent-hover)'"
+            onmouseout="this.style.color='var(--accent)'">
+              ${c.name}
+            </a>`
+          : `<span style="font-weight:600">${c.name}</span>`;
+        row.innerHTML = `
+          <div>${link}</div>
+          <div class="muted" style="font-size:13px">
+            ${c.issuer || ''} ${c.date ? '• ' + c.date : ''}
+          </div>`;
+        el.appendChild(row);
+      });
+    }
+
+    function renderWork(work){
+      const el = document.getElementById('workList'); el.innerHTML='';
+      (work||[]).forEach(w=>{
+        const item = document.createElement('div'); item.style.marginTop='12px';
+        const duration = formatDate(w.start_date) + ' — ' + (w.end_date?formatDate(w.end_date):'Present');
+        item.innerHTML = `<div class="job"><div style="flex:1"><h3>${w.position} @ ${w.name}</h3><div class="meta">${w.city? w.city+', ' : ''}${w.country || ''} • ${duration}</div><p style="margin-top:8px">${w.summary||''}</p></div></div>`;
+        if(w.highlights && w.highlights.length){
+          const ul = document.createElement('ul'); ul.className='highlights';
+          w.highlights.forEach(h=>{ const li=document.createElement('li'); li.textContent=h; ul.appendChild(li); });
+          item.appendChild(ul);
+        }
+        el.appendChild(item);
+      })
+    }
+
+    function renderProjects(projects){
+      const el = document.getElementById('projectsList'); el.innerHTML='';
+      (projects||[]).forEach(p=>{
+        const d = document.createElement('div'); d.className='project';
+        d.innerHTML = `<h5>${p.name}</h5><div class="muted" style="margin-bottom:8px">${p.description||''}</div>`;
+        if(p.highlights && p.highlights.length){
+          const ul = document.createElement('ul'); p.highlights.forEach(h=>{ const li=document.createElement('li'); li.textContent=h; ul.appendChild(li); }); d.appendChild(ul);
+        }
+        el.appendChild(d);
+      })
+    }
+
+    function renderEducation(education){
+      const el = document.getElementById('educationList'); el.innerHTML='';
+      (education||[]).forEach(e=>{
+        const d = document.createElement('div'); d.style.marginTop='10px';
+        d.innerHTML = `<div style="font-weight:700">${e.institution} — ${e.study_type || ''}</div><div class="muted">${e.area || ''} • ${formatDate(e.start_date)} — ${formatDate(e.end_date)}</div>`;
+        el.appendChild(d);
+      })
+    }
+
+    function loadResume(data){
+      if(!data) return;
+      const basics = data.basics || {};
+      renderBasics(basics);
+      renderSummary(data.about || {});
+      renderSkills(data.skills || []);
+      renderCertificates(data.certificates || []);
+      renderWork(data.work || []);
+      renderProjects(data.projects || []);
+      renderEducation(data.education || []);
+    }
+
+    fetch('resume.json').then(r=>r.json()).then(json=>loadResume(json)).catch(()=>{
+      console.log('Use Load JSON button');
+    });
+  </script>
+</body>
+</html>
